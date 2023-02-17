@@ -9,8 +9,8 @@ public class Calc {
         Engine.question();
 
         for (Engine.i = 0; Engine.i < 3; Engine.i++) {
-            int randomNumber1 = (int) (Math.random() * 100);
-            int randomNumber2 = (int) (Math.random() * 100);
+            int randomNumber1 = (int) (Math.random() * 100) + 1;
+            int randomNumber2 = (int) (Math.random() * 100) + 1;
             int randomSign = (int) (Math.random() * 3);
             int result = 0;
             String sign = "";

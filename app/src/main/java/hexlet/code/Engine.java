@@ -23,6 +23,7 @@ public class Engine {
                 System.out.println("What is the result of the expression?");
                 break;
             case 4:
+                System.out.println("Find the greatest common divisor of given numbers.");
                 break;
             case 5:
                 break;
