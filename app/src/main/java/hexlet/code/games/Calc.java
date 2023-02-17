@@ -28,8 +28,6 @@ public class Calc {
                     sign = " * ";
                     break;
                 default:
-                    result = randomNumber1 + randomNumber2;
-                    sign = " + ";
                     break;
             }
             System.out.println("Question: " + randomNumber1 + sign + randomNumber2);
