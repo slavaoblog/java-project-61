@@ -25,6 +25,7 @@ public class Engine {
                 System.out.println("Find the greatest common divisor of given numbers.");
                 break;
             case 5:
+                System.out.println("What number is missing in the progression?");
                 break;
             default:
                 break;
