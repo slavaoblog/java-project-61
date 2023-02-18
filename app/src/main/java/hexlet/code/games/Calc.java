@@ -9,28 +9,27 @@ public class Calc {
         Engine.question();
 
         for (Engine.i = 0; Engine.i < 3; Engine.i++) {
-            int randomNumber1 = (int) (Math.random() * 100) + 1;
-            int randomNumber2 = (int) (Math.random() * 100) + 1;
-            int randomSign = (int) (Math.random() * 3);
+            int a = (int) (Math.random() * 100) + 1;
+            int b = (int) (Math.random() * 100) + 1;
             int result = 0;
             String sign = "";
-            switch (randomSign) {
-                case 0:
-                    result = randomNumber1 + randomNumber2;
+            switch ((int) (Math.random() * 3)) {
+                case 0 -> {
+                    result = a + b;
                     sign = " + ";
-                    break;
-                case 1:
-                    result = randomNumber1 - randomNumber2;
+                }
+                case 1 -> {
+                    result = a - b;
                     sign = " - ";
-                    break;
-                case 2:
-                    result = randomNumber1 * randomNumber2;
+                }
+                case 2 -> {
+                    result = a * b;
                     sign = " * ";
-                    break;
-                default:
-                    break;
+                }
+                default -> {
+                }
             }
-            System.out.println("Question: " + randomNumber1 + sign + randomNumber2);
+            System.out.println("Question: " + a + sign + b);
             Engine.correctAnswer = "" + result;
 
             Engine.answer();
