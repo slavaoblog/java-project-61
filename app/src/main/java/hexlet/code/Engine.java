@@ -9,8 +9,7 @@ public class Engine {
 
     public static void greeting() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
     }
@@ -38,12 +37,10 @@ public class Engine {
         if (playerAnswer.equals(correctAnswer) && i < 2) {
             System.out.println("Correct!");
         } else if (playerAnswer.equals(correctAnswer)) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + userName + "!");
+            System.out.println("Correct!\nCongratulations, " + userName + "!");
         } else {
             System.out.print("'" + playerAnswer + "' is wrong answer ;(. ");
-            System.out.println("Correct answer was '" + correctAnswer + "'.");
-            System.out.println("Let's try again, " + userName + "!");
+            System.out.println("Correct answer was '" + correctAnswer + "'.\nLet's try again, " + userName + "!");
             i = 2;
             scanner.close();
         }
