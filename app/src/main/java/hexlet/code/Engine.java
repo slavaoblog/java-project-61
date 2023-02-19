@@ -27,6 +27,9 @@ public class Engine {
             case 5:
                 System.out.println("What number is missing in the progression?");
                 break;
+            case 6:
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                break;
             default:
                 break;
         }
