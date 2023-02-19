@@ -18,29 +18,21 @@ public class App {
 
         gameNumber = scanner.nextInt();
 
-        switch (gameNumber) {
-            case 0:
-                break;
-            case 1:
-                Engine.greeting();
-                break;
-            case 2:
-                Even.numberTwo();
-                break;
-            case 3:
-                Calc.numberThree();
-                break;
-            case 4:
-                GCD.numberFour();
-                break;
-            case 5:
-                Progression.numberFive();
-            case 6:
-                Prime.numberSix();
-            default:
-                break;
+        if (gameNumber == 0) {
+            return;
+        } else if (gameNumber == 1) {
+            Engine.greeting();
+        } else if (gameNumber == 2) {
+            Even.numberTwo();
+        } else if (gameNumber == 3) {
+            Calc.numberThree();
+        } else if (gameNumber == 4) {
+            GCD.numberFour();
+        } else if (gameNumber == 5) {
+            Progression.numberFive();
+        } else if (gameNumber == 6) {
+            Prime.numberSix();
         }
         scanner.close();
     }
-
 }
