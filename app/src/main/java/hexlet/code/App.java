@@ -12,12 +12,14 @@ public class App {
     public static int gameNumber;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Cli.greeting();
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.print("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
 
-        gameNumber = scanner.nextInt();
+        Scanner scanner2 = new Scanner(System.in);
+        gameNumber = scanner2.nextInt();
+        scanner2.close();
 
         switch (gameNumber) {
             case 0 -> {
