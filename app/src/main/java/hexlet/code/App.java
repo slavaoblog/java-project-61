@@ -9,28 +9,32 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
-    public static int gameNumber;
-
     public static void main(String[] args) {
-        Cli.greeting();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+
+        Scanner scanner = new Scanner(System.in);
+        Engine.userName = scanner.next();
+
+        System.out.println("Hello, " + Engine.userName + "!");
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.print("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
 
-        Scanner scanner2 = new Scanner(System.in);
-        gameNumber = scanner2.nextInt();
-        scanner2.close();
+        int gameNumber = scanner.nextInt();
 
         switch (gameNumber) {
             case 0 -> {
             }
             case 1 -> Cli.greeting();
-            case 2 -> Even.numberTwo();
-            case 3 -> Calc.numberThree();
-            case 4 -> GCD.numberFour();
-            case 5 -> Progression.numberFive();
-            case 6 -> Prime.numberSix();
-            default -> System.out.println("Введен некорректный номер игры, введите еще раз.");
+            case 2 -> Even.startGame();
+            case 3 -> Calc.startGame();
+            case 4 -> GCD.startGame();
+            case 5 -> Progression.startGame();
+            case 6 -> Prime.startGame();
+            default -> System.out.println("Incorrect game number entered, please re-enter.");
         }
+
+
     }
 }

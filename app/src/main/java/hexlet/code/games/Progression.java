@@ -2,9 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 public class Progression {
-    public static void numberFive() {
-        Engine.greeting();
-        Engine.question();
+    public static void startGame() {
+        System.out.println("What number is missing in the progression?");
 
         for (Engine.i = 0; Engine.i < 3; Engine.i++) {
             int a = (int) (Math.random() * 20) + 1;

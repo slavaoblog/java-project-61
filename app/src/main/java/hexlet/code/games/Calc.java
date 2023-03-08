@@ -4,9 +4,8 @@ import hexlet.code.Engine;
 
 public class Calc {
 
-    public static void numberThree() {
-        Engine.greeting();
-        Engine.question();
+    public static void startGame() {
+        System.out.println("What is the result of the expression?");
 
         for (Engine.i = 0; Engine.i < 3; Engine.i++) {
             int a = (int) (Math.random() * 100) + 1;

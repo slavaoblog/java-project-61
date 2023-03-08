@@ -3,9 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void numberSix() {
-        Engine.greeting();
-        Engine.question();
+    public static void startGame() {
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         for (Engine.i = 0; Engine.i < 3; Engine.i++) {
             int a = (int) (Math.random() * 100) + 1;
