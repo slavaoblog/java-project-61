@@ -7,7 +7,7 @@ public class Calc {
     public static void startGame() {
         System.out.println("What is the result of the expression?");
 
-        for (Engine.i = 0; Engine.i < 3; Engine.i++) {
+        for (int i = 0; i < 3; i++) {
             int a = (int) (Math.random() * 100) + 1;
             int b = (int) (Math.random() * 100) + 1;
             int result = 0;
@@ -28,10 +28,9 @@ public class Calc {
                 default -> {
                 }
             }
-            System.out.println("Question: " + a + sign + b);
-            Engine.correctAnswer = "" + result;
-
-            Engine.answer();
+            Engine.setQuestionAnswer(i, 0,"Question: " + a + sign + b);
+            Engine.setQuestionAnswer(i, 1, "" + result);
         }
+            Engine.answer();
     }
 }
