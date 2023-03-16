@@ -14,27 +14,31 @@ public class App {
         System.out.print("May I have your name? ");
 
         Scanner scanner = new Scanner(System.in);
-        Engine.userName = scanner.next();
+        Engine.userName = scanner.nextLine();
 
         System.out.println("Hello, " + Engine.userName + "!");
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.print("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
 
-        int gameNumber = scanner.nextInt();
-
-        switch (gameNumber) {
-            case 0 -> {
-            }
-            case 1 -> Cli.greeting();
-            case 2 -> Even.startGame();
-            case 3 -> Calc.startGame();
-            case 4 -> GCD.startGame();
-            case 5 -> Progression.startGame();
-            case 6 -> Prime.startGame();
-            default -> System.out.println("Incorrect game number entered, please re-enter.");
-        }
-
-
+        boolean exit;
+        do {
+            exit = true;
+            String n = scanner.nextLine();
+                switch (n) {
+                    case "0" -> {
+                    }
+                    case "1" -> Cli.greeting();
+                    case "2" -> Even.startGame();
+                    case "3" -> Calc.startGame();
+                    case "4" -> GCD.startGame();
+                    case "5" -> Progression.startGame();
+                    case "6" -> Prime.startGame();
+                    default -> {
+                        System.out.println("Incorrect game number entered, please re-enter.");
+                        exit = false;
+                    }
+                }
+        } while (!exit);
     }
 }
