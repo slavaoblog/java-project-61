@@ -5,6 +5,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 
 public class App {
@@ -18,20 +19,20 @@ public class App {
         do {
             exit = true;
             String n = scanner.nextLine();
-                switch (n) {
-                    case "0" -> {
-                    }
-                    case "1" -> Cli.greeting();
-                    case "2" -> Even.startGame();
-                    case "3" -> Calc.startGame();
-                    case "4" -> GCD.startGame();
-                    case "5" -> Progression.startGame();
-                    case "6" -> Prime.startGame();
-                    default -> {
-                        System.out.println("Incorrect game number entered, please re-enter.");
-                        exit = false;
-                    }
+            switch (n) {
+                case "0" -> {
                 }
+                case "1" -> Cli.greeting();
+                case "2" -> Even.startGame();
+                case "3" -> Calc.startGame();
+                case "4" -> GCD.startGame();
+                case "5" -> Progression.startGame();
+                case "6" -> Prime.startGame();
+                default -> {
+                    System.out.println("Incorrect game number entered, please re-enter.");
+                    exit = false;
+                }
+            }
         } while (!exit);
     }
 }

@@ -26,7 +26,7 @@ public class Calc {
                 default -> {
                 }
             }
-            Engine.setQuestionAnswer(i, 0,"Question: " + a + sign + b);
+            Engine.setQuestionAnswer(i, 0, "Question: " + a + sign + b);
             Engine.setQuestionAnswer(i, 1, "" + result);
         }
         Engine.greeting();
