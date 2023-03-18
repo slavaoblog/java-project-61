@@ -4,10 +4,14 @@ import hexlet.code.Engine;
 
 public class Progression {
     public static void startGame() {
-        for (int i = 0; i < 3; i++) {
-            int a = (int) (Math.random() * 20) + 1; // 1-20 the value of the first member of the progression.
-            int b = (int) (Math.random() * 5) + 2; // 2-6 the step value.
-            int c = (int) (Math.random() * 10); // 0-9 the missing member position.
+        int numOfGameStages = 3;
+        int upperBoundStartOfProgression = 20;
+        int upperBoundStepValue = 6;
+        int upperBoundPosition = 10;
+        for (int i = 0; i < numOfGameStages; i++) {
+            int a = (int) (Math.random() * upperBoundStartOfProgression) + 1; // 1-20 the value of the first member of the progression.
+            int b = (int) (Math.random() * upperBoundStepValue) + 1; // 1-6 the step value.
+            int c = (int) (Math.random() * upperBoundPosition); // 0-9 the missing member position.
             Engine.setQuestionAnswer(i, 1, "" + (a + b * c));
             String progression = "";
             // if j==c, prints a space, otherwise prints next member.

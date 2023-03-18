@@ -4,9 +4,11 @@ import hexlet.code.Engine;
 
 public class GCD {
     public static void startGame() {
-        for (int i = 0; i < 3; i++) {
-            int randomNum1 = (int) (Math.random() * 100 + 1);
-            int randomNum2 = (int) (Math.random() * 100 + 1);
+        int numOfGameStages = 3;
+        int upperBoundForRandom = 100;
+        for (int i = 0; i < numOfGameStages; i++) {
+            int randomNum1 = (int) (Math.random() * upperBoundForRandom + 1);
+            int randomNum2 = (int) (Math.random() * upperBoundForRandom + 1);
             Engine.setQuestionAnswer(i, 0, "Question: " + randomNum1 + " " + randomNum2);
             Engine.setQuestionAnswer(i, 1, "" + gcd(randomNum1, randomNum2));
         }

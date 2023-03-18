@@ -4,8 +4,10 @@ import hexlet.code.Engine;
 
 public class Even {
     public static void startGame() {
-        for (int i = 0; i < 3; i++) {
-            int randomNumber = (int) (Math.random() * 100) + 1;
+        int numOfGameStages = 3;
+        int upperBoundForRandom = 100;
+        for (int i = 0; i < numOfGameStages; i++) {
+            int randomNumber = (int) (Math.random() * upperBoundForRandom) + 1;
             Engine.setQuestionAnswer(i, 0, "Question: " + randomNumber);
             Engine.setQuestionAnswer(i, 1, randomNumber % 2 == 0 ? "yes" : "no");
         }

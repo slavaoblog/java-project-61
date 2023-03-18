@@ -5,12 +5,15 @@ import hexlet.code.Engine;
 public class Calc {
 
     public static void startGame() {
-        for (int i = 0; i < 3; i++) {
-            int a = (int) (Math.random() * 100) + 1;
-            int b = (int) (Math.random() * 100) + 1;
+        int numOfGameStages = 3;
+        int numOfMathOperations = 3;
+        int upperBoundForRandom = 100;
+        for (int i = 0; i < numOfGameStages; i++) {
+            int a = (int) (Math.random() * upperBoundForRandom) + 1;
+            int b = (int) (Math.random() * upperBoundForRandom) + 1;
             int result = 0;
             String sign = "";
-            switch ((int) (Math.random() * 3)) {
+            switch ((int) (Math.random() * numOfMathOperations)) {
                 case 0 -> {
                     result = a + b;
                     sign = " + ";

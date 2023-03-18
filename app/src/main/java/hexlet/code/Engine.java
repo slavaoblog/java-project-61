@@ -19,7 +19,8 @@ public class Engine {
     }
 
     public static void answer() {
-        for (var i = 0; i < 3; i++) {
+        int numOfGameStages = 3;
+        for (var i = 0; i < numOfGameStages; i++) {
             System.out.println(questionAnswer[i][0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
