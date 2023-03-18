@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 
 public class Progression {
     public static void startGame() {
-        System.out.println("What number is missing in the progression?");
-
         for (int i = 0; i < 3; i++) {
             int a = (int) (Math.random() * 20) + 1; // 1-20 the value of the first member of the progression.
             int b = (int) (Math.random() * 5) + 2; // 2-6 the step value.
@@ -19,6 +17,8 @@ public class Progression {
             }
             Engine.setQuestionAnswer(i, 0, "Question: " + progression);
         }
+        Engine.greeting();
+        System.out.println("What number is missing in the progression?");
         Engine.answer();
     }
 }

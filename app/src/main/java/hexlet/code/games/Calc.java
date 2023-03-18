@@ -5,8 +5,6 @@ import hexlet.code.Engine;
 public class Calc {
 
     public static void startGame() {
-        System.out.println("What is the result of the expression?");
-
         for (int i = 0; i < 3; i++) {
             int a = (int) (Math.random() * 100) + 1;
             int b = (int) (Math.random() * 100) + 1;
@@ -31,6 +29,8 @@ public class Calc {
             Engine.setQuestionAnswer(i, 0,"Question: " + a + sign + b);
             Engine.setQuestionAnswer(i, 1, "" + result);
         }
-            Engine.answer();
+        Engine.greeting();
+        System.out.println("What is the result of the expression?");
+        Engine.answer();
     }
 }

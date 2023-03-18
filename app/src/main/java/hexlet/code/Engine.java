@@ -9,17 +9,14 @@ public class Engine {
     public static void setQuestionAnswer(int x, int y, String str) {
         questionAnswer[x][y] = str;
     }
-
-    public static String getUserName() {
-        return userName;
-    }
-
-    public static void setUserName(String userNameInsert) {
-        userName = userNameInsert;
+    static Scanner scanner = new Scanner(System.in);
+    public static void greeting() {
+        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
+        userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
     }
 
     public static void answer() {
-        Scanner scanner = new Scanner(System.in);
         for (var i = 0; i < 3; i++) {
             System.out.println(questionAnswer[i][0]);
             System.out.print("Your answer: ");
