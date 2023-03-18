@@ -3,11 +3,19 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static String userName;
+    private static String userName;
     private static String[][] questionAnswer = new String[3][2];
 
     public static void setQuestionAnswer(int x, int y, String str) {
         questionAnswer[x][y] = str;
+    }
+
+    public static String getUserName() {
+        return userName;
+    }
+
+    public static void setUserName(String userNameInsert) {
+        userName = userNameInsert;
     }
 
     public static void answer() {
