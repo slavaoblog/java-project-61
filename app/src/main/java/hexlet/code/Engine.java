@@ -5,19 +5,20 @@ public class Engine {
     private static String userName;
     public static final int NUMBER_OF_ROUNDS = 3;
     private static String[][] questionAnswerArray = new String[NUMBER_OF_ROUNDS][2];
-    static Scanner scanner = new Scanner(System.in);
 
     public static void setQuestionAnswerArray(int x, int y, String str) {
         questionAnswerArray[x][y] = str;
     }
 
     public static void greeting() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
     }
 
     public static void answer() {
+        Scanner scanner = new Scanner(System.in);
         for (var i = 0; i < NUMBER_OF_ROUNDS; i++) {
             System.out.println(questionAnswerArray[i][0]);
             System.out.print("Your answer: ");
