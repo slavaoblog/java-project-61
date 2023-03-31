@@ -11,8 +11,8 @@ public class GCD {
     public static void startGame() {
         Engine.setGameTask("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            int randomNum1 = Utils.generateNum(0, UPPER_BOUND_FOR_RANDOM);
-            int randomNum2 = Utils.generateNum(0, UPPER_BOUND_FOR_RANDOM);
+            int randomNum1 = Utils.generateNum(1, UPPER_BOUND_FOR_RANDOM);
+            int randomNum2 = Utils.generateNum(1, UPPER_BOUND_FOR_RANDOM);
             Engine.setQuestionAnswerArray(i, 0, "Question: " + randomNum1 + " " + randomNum2);
             Engine.setQuestionAnswerArray(i, 1, "" + gcd(randomNum1, randomNum2));
         }
