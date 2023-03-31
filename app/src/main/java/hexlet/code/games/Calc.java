@@ -17,7 +17,7 @@ public class Calc {
             int c = Utils.generateNum(0, ARRAY_OF_SIGNS.length - 1);
             char sign = ARRAY_OF_SIGNS[c];
             int result = calculate(a, b, sign);
-            Engine.setQuestionAnswerArray(i, 0, "Question: " + a + sign + b);
+            Engine.setQuestionAnswerArray(i, 0, "Question: " + a + ' ' + sign + ' ' + b);
             Engine.setQuestionAnswerArray(i, 1, "" + result);
         }
     }
