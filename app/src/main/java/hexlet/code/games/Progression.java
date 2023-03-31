@@ -15,7 +15,7 @@ public class Progression {
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             int firstMember = Utils.generateNum(0, UPPER_BOUND_FOR_FIRST_MEMBER);
             int stepValue = Utils.generateNum(1, UPPER_BOUND_STEP_VALUE);
-            int indexOfMissing = Utils.generateNum(0, NUMBER_OF_MEMBERS);
+            int indexOfMissing = Utils.generateNum(0, NUMBER_OF_MEMBERS - 1);
             int[] progressionArray = numsArray(NUMBER_OF_MEMBERS, firstMember, stepValue);
             String progression = "";
             for (var j = 0; j < NUMBER_OF_MEMBERS; j++) {
