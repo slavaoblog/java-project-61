@@ -9,15 +9,12 @@ public class Prime {
     static final int UPPER_BOUND_FOR_RANDOM = 100;
 
     public static void startGame() {
+        Engine.setGameTask("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            int randomNum = Utils.generateNumber(1, UPPER_BOUND_FOR_RANDOM);
+            int randomNum = Utils.generateNum(1, UPPER_BOUND_FOR_RANDOM);
             Engine.setQuestionAnswerArray(i, 0, "Question: " + randomNum);
-            Engine.setQuestionAnswerArray(i, 1, isPrime(randomNum) ? "yes": "no");
-
+            Engine.setQuestionAnswerArray(i, 1, isPrime(randomNum) ? "yes" : "no");
         }
-        Engine.greeting();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        Engine.answer();
     }
 
     public static boolean isPrime(int num) {

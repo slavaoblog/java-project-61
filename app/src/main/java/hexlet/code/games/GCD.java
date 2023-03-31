@@ -1,19 +1,21 @@
 package hexlet.code.games;
+
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 
 public class GCD {
     static final int UPPER_BOUND_FOR_RANDOM = 100;
+
     public static void startGame() {
+        Engine.setGameTask("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            int randomNum1 = (int) (Math.random() * UPPER_BOUND_FOR_RANDOM + 1);
-            int randomNum2 = (int) (Math.random() * UPPER_BOUND_FOR_RANDOM + 1);
+            int randomNum1 = Utils.generateNum(0, UPPER_BOUND_FOR_RANDOM);
+            int randomNum2 = Utils.generateNum(0, UPPER_BOUND_FOR_RANDOM);
             Engine.setQuestionAnswerArray(i, 0, "Question: " + randomNum1 + " " + randomNum2);
             Engine.setQuestionAnswerArray(i, 1, "" + gcd(randomNum1, randomNum2));
         }
-        Engine.greeting();
-        System.out.println("Find the greatest common divisor of given numbers.");
-        Engine.answer();
     }
 
     public static int gcd(int a, int b) {

@@ -1,7 +1,7 @@
 package hexlet.code;
 
 public class Utils {
-    public static int generateNumber(int start, int finish) {
+    public static int generateNum(int start, int finish) {
         if (finish < start) {
             System.out.println("Start of range must not exceed end!");
             return 1;
