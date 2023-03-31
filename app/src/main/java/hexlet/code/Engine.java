@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Engine {
     private static String userName;
     public static final int NUMBER_OF_ROUNDS = 3;
-    private static String[][] questionAnswerArray = new String[NUMBER_OF_ROUNDS][2];
+    private static final String[][] questionAnswerArray = new String[NUMBER_OF_ROUNDS][2];
 
     public static void setQuestionAnswerArray(int x, int y, String str) {
         questionAnswerArray[x][y] = str;
@@ -23,7 +23,7 @@ public class Engine {
             System.out.println(questionAnswerArray[i][0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
-            if (playerAnswer.equalsIgnoreCase(questionAnswerArray[i][1]) && i < 2) {
+            if (playerAnswer.equalsIgnoreCase(questionAnswerArray[i][1]) && i < NUMBER_OF_ROUNDS - 1) {
                 System.out.println("Correct!");
             } else if (playerAnswer.equalsIgnoreCase(questionAnswerArray[i][1])) {
                 System.out.println("Correct!\nCongratulations, " + userName + "!");
