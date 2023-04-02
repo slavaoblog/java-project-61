@@ -12,7 +12,7 @@ public class Prime {
         String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] questionAnswerArray = new String[NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            int randomNum = Utils.generateNum(1, UPPER_BOUND_FOR_RANDOM);
+            int randomNum = Utils.generateNum(2, UPPER_BOUND_FOR_RANDOM);
             questionAnswerArray[i][0] = "Question: " + randomNum;
             questionAnswerArray[i][1] = isPrime(randomNum) ? "yes" : "no";
         }
