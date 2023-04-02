@@ -20,26 +20,11 @@ public class App {
             case "0" -> {
             }
             case "1" -> Cli.greeting();
-            case "2" -> {
-                Even.startGame();
-                Engine.answer();
-            }
-            case "3" -> {
-                Calc.startGame();
-                Engine.answer();
-            }
-            case "4" -> {
-                GCD.startGame();
-                Engine.answer();
-            }
-            case "5" -> {
-                Progression.startGame();
-                Engine.answer();
-            }
-            case "6" -> {
-                Prime.startGame();
-                Engine.answer();
-            }
+            case "2" -> Even.startGame();
+            case "3" -> Calc.startGame();
+            case "4" -> GCD.startGame();
+            case "5" -> Progression.startGame();
+            case "6" -> Prime.startGame();
             default -> System.out.println("Incorrect game number entered, please re-enter.");
         }
     }
